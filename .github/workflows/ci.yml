@@ -67,7 +67,6 @@ jobs:
           -Psigning.secretKeyRingFile="$HOME/secring.gpg"
 
       - name: PublishDocumentation
-        if: startsWith(github.ref, 'refs/tags/')
         run: |
           ./gradlew dokkaHtml
           git config user.email CONX_GH_PAGES_USER_EMAIL
