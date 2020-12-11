@@ -69,9 +69,9 @@ jobs:
       - name: PublishDocumentation
         run: |
           ./gradlew dokkaHtml
-          git config user.email CONX_GH_PAGES_USER_EMAIL
-          git config user.name CONX_GH_PAGES_USER_NAME
-          git checkout gh-pages
+          git config user.email 'something@test.com'
+          git config user.name 'ci-build'
+          git checkout --orphan gh-pages
           git rm -rf .
           git add ./core/build/dokka/html/core/
           git commit -m 'Updating dokka documentation'
