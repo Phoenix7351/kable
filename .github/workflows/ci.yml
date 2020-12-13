@@ -71,7 +71,7 @@ jobs:
           ./gradlew dokkaHtml
           git config user.email 'something@test.com'
           git config user.name 'ci-build'
-          git checkout --orphan gh-pages
+          git checkout gh-pages
           git rm -rf .
           git add ./core/build/dokka/html/core/
           git commit -m 'Updating dokka documentation'
