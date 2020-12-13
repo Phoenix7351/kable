@@ -75,6 +75,6 @@ jobs:
           git checkout gh-pages
           git rm -rf .
           mv ./core/build/dokka/html/core/* .
-          git add ./core/build/dokka/html/core/
+          git add .
           git commit -m 'Updating dokka documentation'
           git push origin gh-pages
