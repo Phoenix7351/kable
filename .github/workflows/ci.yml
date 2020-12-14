@@ -68,12 +68,12 @@ jobs:
 
       - name: PublishDocumentation
         run: |
+          ./gradlew dokkaHtml
           git config user.email 'something@test.com'
           git config user.name 'ci-build'
           git fetch
           git checkout gh-pages
           git rm -rf .
-          ./gradlew dokkaHtml
           mv core/build/dokka/html/core/ .
           git add .
           git commit -m 'Updating dokka documentation'
