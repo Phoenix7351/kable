@@ -73,7 +73,7 @@ jobs:
           git config user.name 'ci-build'
           git fetch
           git checkout gh-pages
-          mv core/build/dokka/html/core/ .
+          mv core/build/dokka/html/core/* .
           git add .
           git commit -m 'Updating dokka documentation'
           git push origin gh-pages
