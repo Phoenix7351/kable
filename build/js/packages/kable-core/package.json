@@ -1,0 +1,19 @@
+{
+  "main": "kotlin/kable-core.js",
+  "devDependencies": {
+    "dukat": "0.5.7"
+  },
+  "dependencies": {
+    "kotlinx-coroutines-core": "file:/home/runner/work/kable/kable/build/js/packages_imported/kotlinx-coroutines-core/1.4.2",
+    "kotlinx-atomicfu": "file:/home/runner/work/kable/kable/build/js/packages_imported/kotlinx-atomicfu/0.14.4",
+    "kotlin": "file:/home/runner/work/kable/kable/build/js/packages_imported/kotlin/1.4.10",
+    "uuid-jsLegacy": "file:/home/runner/work/kable/kable/build/js/packages_imported/uuid-jsLegacy/0.2.2",
+    "kotlin-test-js-runner": "file:/home/runner/work/kable/kable/build/js/packages_imported/kotlin-test-js-runner/1.4.10",
+    "kotlin-test": "file:/home/runner/work/kable/kable/build/js/packages_imported/kotlin-test/1.4.10"
+  },
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": [],
+  "name": "kable-core",
+  "version": "0.0.0-main-SNAPSHOT"
+}
