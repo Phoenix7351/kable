@@ -19,8 +19,9 @@ jobs:
           git config user.name 'ci-build'
           git fetch
           git checkout gh-pages
-          rsync -a core/build/dokka/html/core/ .
-          rm -rf core/*
+          mv core/build/dokka/html/core/ temp_core/
+          rm -rf core/
+          mv temp_core/ core/
           git add ./com.juul.kable
           git add index.html
           git add package-list
