@@ -8,8 +8,7 @@ jobs:
 
     steps:
       - name: GenerateDocumentation
-          run: |
-            ./gradlew dokkaHtml
+          run: ./gradlew dokkaHtml
 
       - name: PublishDocumentation
           run: |
