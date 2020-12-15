@@ -66,17 +66,17 @@ jobs:
           -Psigning.password="${{ secrets.SIGNING_PASSWORD }}"
           -Psigning.secretKeyRingFile="$HOME/secring.gpg"
 
-      - name: PublishDocumentation
-        run: |
-          ./gradlew dokkaHtml
-          git config user.email 'something@test.com'
-          git config user.name 'ci-build'
-          git fetch
-          git checkout gh-pages
-          rsync -a core/build/dokka/html/core/ .
-          rm -rf core/*
-          git add ./com.juul.kable
-          git add index.html
-          git add package-list
-          git commit -m 'Updating dokka documentation'
-          git push origin gh-pages
+#      - name: PublishDocumentation
+#        run: |
+#          ./gradlew dokkaHtml
+#          git config user.email 'something@test.com'
+#          git config user.name 'ci-build'
+#          git fetch
+#          git checkout gh-pages
+#          rsync -a core/build/dokka/html/core/ .
+#          rm -rf core/*
+#          git add ./com.juul.kable
+#          git add index.html
+#          git add package-list
+#          git commit -m 'Updating dokka documentation'
+#          git push origin gh-pages

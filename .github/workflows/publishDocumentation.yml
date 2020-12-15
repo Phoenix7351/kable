@@ -1,0 +1,26 @@
+name: PublishDocumentation
+on:
+  push:
+
+jobs:
+  generate-and-build-documentation:
+    runs-on: ubuntu-16.04
+
+    steps:
+      - name: GenerateDocumentation
+          run: |
+            ./gradlew dokkaHtml
+
+      - name: PublishDocumentation
+          run: |
+            git config user.email 'something@test.com'
+            git config user.name 'ci-build'
+            git fetch
+            git checkout gh-pages
+            rsync -a core/build/dokka/html/core/ .
+            rm -rf core/*
+            git add ./com.juul.kable
+            git add index.html
+            git add package-list
+            git commit -m 'Updating dokka documentation'
+            git push origin gh-pages
