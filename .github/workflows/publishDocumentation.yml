@@ -20,8 +20,8 @@ jobs:
           git fetch
           git checkout gh-pages
           mv core/build/dokka/html/core/ temp_core/
-          rm -rf core/
-          mv temp_core/ core/
+          rm -rf core/*
+          mv temp_core/ .
           git add ./com.juul.kable
           git add index.html
           git add package-list
